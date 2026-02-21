@@ -4,23 +4,28 @@ pipeline
   stages{
     stage('clone'){
       steps{
-        git branch:'main',url:'https://github.com/Meharsai26/Calculator.git'
+        git branch:'main',url:'https://github.com/Meharsai26/Calculator.git';
       }
     }
      stage('compile')
-    {steps{
+    {
+      steps
+     {
             sh 'javac Calculator.java'
           }
         }
     stage('test')
     {
-      steps{
+      steps
+      {
         sh 'java Calculator 30 -5'
       }
     }
     stage('Deploy')
     {
+      steps{
       echo 'deployment completed'
+    }
     }
    
   }
