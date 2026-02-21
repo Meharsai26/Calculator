@@ -14,6 +14,13 @@ pipeline
             sh 'javac Calculator.java'
           }
         }
+    stage('Build')
+    {
+      steps
+      {
+        sh 'java Calculator 25 5'
+      }
+    }
     stage('test')
     {
       steps
