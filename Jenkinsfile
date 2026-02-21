@@ -20,13 +20,8 @@ pipeline
     }
     stage('Deploy')
     {
-      
+      echo 'deployment completed'
     }
-    stage('build')
-    {
-      steps{
-        sh 'java Calculator 25 5'
-      }
-    }
+   
   }
 }
